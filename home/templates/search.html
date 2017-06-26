@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    {% for i in items %}
+
+        <div class="mdl-card mdl-shadow--2dp">
+            <a href="{{ i.qr.url }}" data-lightbox="{{ i.id }}"><img
+                    src="{{ i.image.url }}"/></a>
+        </div>
+
+    {% empty %}
+
+        <h4>Sorry, no results found</h4>
+
+    {% endfor %}
+
+{% endblock %}
