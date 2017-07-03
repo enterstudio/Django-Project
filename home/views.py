@@ -19,6 +19,7 @@ def search(request):
     template = loader.get_template('search.html')
     query = request.GET['search']
     context = {
-        'items': Post.objects.filter(tags__name__in=[query])
+        'items': Post.objects.filter(tags__name__in=[query]),
+        'query': query,
     }
     return HttpResponse(template.render(context, request))

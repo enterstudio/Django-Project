@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 
+{% block header %}
+
+    {% if query %}
+
+        <center><h6>Search results for "{{ query }}"</h6></center>
+
+    {% endif %}
+
+{% endblock %}
+
 {% block body %}
 
     {% for i in items %}

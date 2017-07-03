@@ -12,11 +12,22 @@
     background-color: #212121;
 }
 
+.mdl-mini-footer{
+    height: 2%;
+}
+
 h4 {
     color: lightgrey;
+}
+
+h6 {
+    align-items: center;
+    color: lightgrey;
+
 }
 
 #home {
     color: white;
     text-decoration: none;
 }
+
