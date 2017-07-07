@@ -1,5 +1,7 @@
 from django.db import models
+from django_resized import ResizedImageField
 from taggit.managers import TaggableManager
+
 
 def upload_location(instance, filename):
     return "{}/{}".format(instance.id, filename)
@@ -7,10 +9,13 @@ def upload_location(instance, filename):
 
 class Post(models.Model):
     title = models.CharField(max_length=140)
-    image = models.ImageField(upload_to=upload_location,
+    image = ResizedImageField(size=[250, 250],
+                              upload_to=upload_location,
                               blank=True,
                               null=True)
-    qr = models.ImageField(upload_to=upload_location,
+
+    qr = ResizedImageField(size=[250, 250],
+                           upload_to=upload_location,
                            blank=True,
                            null=True)
     date = models.DateField()
