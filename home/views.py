@@ -17,7 +17,7 @@ def home(request):
 
 def search(request):
     template = loader.get_template('search.html')
-    query = request.GET['search']
+    query = request.GET['search'].lower()
     context = {
         'items': Post.objects.filter(tags__name__in=[query]),
         'query': query,
