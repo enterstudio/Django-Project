@@ -22,6 +22,8 @@ from SeedScan import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('home.urls')),
+    url(r'^filter/', include('filter.urls')),
+    url(r'^data/', include('data.urls')),
 ]
 
 if settings.DEBUG:

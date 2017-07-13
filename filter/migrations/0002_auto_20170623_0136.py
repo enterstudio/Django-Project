@@ -3,24 +3,24 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import home.models
+import filter.models
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0001_initial'),
+        ('filter', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='post',
             name='image',
-            field=models.ImageField(blank=True, null=True, upload_to=home.models.upload_location),
+            field=models.ImageField(blank=True, null=True, upload_to=filter.models.upload_location),
         ),
         migrations.AlterField(
             model_name='post',
             name='qr',
-            field=models.ImageField(blank=True, null=True, upload_to=home.models.upload_location),
+            field=models.ImageField(blank=True, null=True, upload_to=filter.models.upload_location),
         ),
     ]

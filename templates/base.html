@@ -9,7 +9,7 @@
 
     <!-- Page styles -->
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+          href="https://fonts.googleapis.com/css?family=Roboto:thin,light,lang=en">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
@@ -27,34 +27,29 @@
         <div class="mdl-layout__header-row">
             <!-- Title -->
             <span class="mdl-layout-title">
-                <a id="home" href="{% url "home" %}">Snapseed filters</a>
+                <a id="filter" href="{% url "home" %}">Rhys Fernandes</a>
             </span>
+
+
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                        mdl-textfield--floating-label mdl-textfield--align-right">
 
 
-                <form method="get" action="/search/">
-                    <label class="mdl-button mdl-js-button mdl-button--icon"
-                           for="search">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input"
-                               name="search"
-                               value="{{ search }}"
-                               type="text"
-                               id="search">
-                    </div>
-                </form>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="{% url "filter" %}">Snapseed
+                                                                          Filters</a>
+                <a class="mdl-navigation__link" href="{% url "data" %}">Gym
+                                                                        Data
+                                                                    Analysis</a>
+
+            </nav>
 
 
-            </div>
         </div>
     </header>
 
     <main class="mdl-layout__content">
+
 
         {% block header %}
 
@@ -71,9 +66,9 @@
         </div>
     </main>
     <footer class="mdl-mini-footer">
-            <p class="mdl-typography--font-light">Copyright © 2017 Rhys
-                                                  Fernandes.
-                                                  All rights reserved</p>
+        <p class="mdl-typography--font-light">Copyright © 2017 Rhys
+                                              Fernandes.
+                                              All rights reserved</p>
 
     </footer>
 </div>

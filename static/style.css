@@ -8,8 +8,16 @@
     justify-content: center;
 }
 
+.material-icons {
+    color: lightgrey;
+}
+
 .mdl-layout__content {
     background-color: #212121;
+}
+
+.mdl-textfield__input {
+    color:lightgrey;
 }
 
 .mdl-mini-footer{
@@ -26,7 +34,11 @@ h6 {
 
 }
 
-#home {
+p {
+    color: lightgrey;
+}
+
+#filter {
     color: white;
     text-decoration: none;
 }

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <center>
+        <br>
+
+        <h4>An Analysis and Visualization of Gym Session data</h4>
+
+        <br>
+
+        <p>In this project I scrapped "check in" and "check out" data from
+           my gyms website using BeautifulSoup. After the data was cleaned
+           and resolved of any discrepancies, it was stored in an SQLite
+           Database. A mix of Numpy and Pygal was used to analyse and
+           visualize the data.
+        </p>
+
+        <br>
+
+        <object data="/media/svg/line_chart.svg" type="image/svg+xml"></object>
+        <object data="/media/svg/bar_chart.svg" type="image/svg+xml"></object>
+        <object data="/media/svg/bar_chart2.svg" type="image/svg+xml"></object>
+        <object data="/media/svg/pie_chart.svg" type="image/svg+xml"></object>
+
+
+    </center>
+
+
+{% endblock %}

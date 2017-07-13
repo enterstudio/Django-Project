@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+
+    <center>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                        mdl-textfield--floating-label mdl-textfield--align-right">
+
+        <form method="get" action={% url 'search' %}>
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="search">
+                <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+                <input class="mdl-textfield__input"
+                       name="search"
+                       value="{{ search }}"
+                       type="text"
+                       id="search">
+            </div>
+        </form>
+    </div>
+    </center>
+
+{% endblock %}
+
+{% block body %}
+
+    {% for i in items %}
+
+        {% if i.qr.url is not None %}
+            <div class="mdl-card mdl-shadow--2dp">
+                <a href="{{ i.qr.url }}" data-lightbox="{{ i.id }}"><img
+                        src="{{ i.image.url }}"/></a>
+            </div>
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
